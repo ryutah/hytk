@@ -9,9 +9,14 @@
  */
 angular.module('yoAngularApp')
   .controller('FooCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    // $scope.awesomeThings = [
+    //   'HTML5 Boilerplate',
+    //   'AngularJS',
+    //   'Karma'
+    // ];
+
+    $scope.test = function() {
+      console.log($scope.foo);
+      console.log($scope.awesomeThings);
+    };
   });
