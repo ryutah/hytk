@@ -7,6 +7,7 @@
  * # FooCtrl
  * Controller of the yoAngularApp
  */
+
 angular.module('yoAngularApp')
   .controller('FooCtrl', function ($scope) {
     // $scope.awesomeThings = [
