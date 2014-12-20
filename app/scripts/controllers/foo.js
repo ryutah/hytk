@@ -16,6 +16,8 @@ angular.module('yoAngularApp')
     //   'Karma'
     // ];
 
+    $scope.myfoo = '##MyTEST';
+
     $scope.test = function() {
       console.log($scope.foo);
       console.log($scope.awesomeThings);
