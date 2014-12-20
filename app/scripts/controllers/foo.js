@@ -19,5 +19,7 @@ angular.module('yoAngularApp')
     $scope.test = function() {
       console.log($scope.foo);
       console.log($scope.awesomeThings);
+
+      $scope.myfoo = $scope.foo;
     };
   });
