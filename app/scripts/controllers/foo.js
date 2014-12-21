@@ -23,5 +23,8 @@ angular.module('yoAngularApp')
       console.log($scope.awesomeThings);
 
       $scope.myfoo = $scope.foo;
+
+      var json = JSON.stringify($scope);
+      console.log(json);
     };
   });
