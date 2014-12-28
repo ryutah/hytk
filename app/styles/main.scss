@@ -12,11 +12,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 /* Space out content a bit */
 body {
+  -webkit-text-size-adjust: 100%;
+  
   padding-top: 20px;
   padding-bottom: 20px;
   background: url("../images/back.jpg");
   background-size: 100% auto;
-
 }
 
 textarea {
