@@ -9,15 +9,14 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-  <script src="bower_components/marked/lib/marked.js"></script>
+   <!--<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>-->
 </head>
 
 <body ng-app="yoAngularApp">
@@ -38,13 +37,16 @@
       </ul>
       <h3>hytk</h3>
     </div>
+  </div>
 
-    <div ng-view class="anim"></div>
+    <div class="container parent">
+      <div ng-view class="anim"></div>
+    </div>
 
     <!-- <div class="footer">
       <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
     </div> -->
-  </div>
+  <!-- </div> -->
 
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -76,6 +78,7 @@
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/highlightjs/highlight.pack.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
@@ -94,6 +97,7 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/marked/lib/marked.js"></script>
   <script src="bower_components/angular-marked/angular-marked.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
