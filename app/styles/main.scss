@@ -46,25 +46,37 @@ textarea {
     font-weight: 700;
   }
 
-  li {
-    font-family: 'Gentium Book Basic', serif;
-    font-weight: 700;
-  }
-
   li:nth-child(2) {
     // border-right: 2px solid #333;
     // border-left: 2px solid #333;
   }
+}
+.navbar {
+  .navbar-collapse {
+    border-color: transparent;
+  }
+}
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
 
-  .nav-pills {
-    li {
-      font-size: 20px;
-      a {
-        color: #333;
-      }
+.navbar-toggle {
+  border: 0px
+}
+
+#nav-menu-1 {
+  li {
+    font-size: 20px;
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 700;
+    a {
+      color: #333;
+    }
+    a:hover {
+      color: #333;
     }
   }
-
 }
 /* Custom page footer */
 .footer {
