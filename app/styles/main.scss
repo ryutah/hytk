@@ -32,7 +32,7 @@ textarea {
   padding-right: 15px;
 }
 /* Custom page header */
-.header {
+.collapse {
   // border-bottom: 1px solid #e5e5e5;
 
   /* Make the masthead heading the same height as the navigation */
@@ -52,8 +52,8 @@ textarea {
   }
 
   li:nth-child(2) {
-    border-right: 2px solid #333;
-    border-left: 2px solid #333;
+    // border-right: 2px solid #333;
+    // border-left: 2px solid #333;
   }
 
   .nav-pills {
