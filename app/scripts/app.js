@@ -8,10 +8,15 @@
  *
  * Main module of the application.
  */
-var app = angular.module('yoAngularApp', ['ngAnimate', 'ngCookies', 'ngResource',
-  'ngRoute', 'ngSanitize', 'ngTouch',
-  'hc.marked'
-]);
+var app = angular.module('yoAngularApp',
+                        ['ngAnimate',
+                         'ngCookies',
+                         'ngResource',
+                         'ngRoute',
+                         'ngSanitize',
+                         'ngTouch',
+                         'hc.marked'
+                  ]);
 
 app.config(function($routeProvider) {
   $routeProvider
@@ -41,33 +46,3 @@ app.config(['markedProvider', function(markedProvider) {
     }
   });
 }]);
-
-// angular
-//   .module('yoAngularApp', [
-//     'ngAnimate',
-//     'ngCookies',
-//     'ngResource',
-//     'ngRoute',
-//     'ngSanitize',
-//     'ngTouch',
-//     'hc.marked'
-//   ])
-//    .config(
-//   function ($routeProvider) {
-//     $routeProvider
-//       .when('/', {
-//         templateUrl: 'views/main.html',
-//         controller: 'MainCtrl'
-//       })
-//       .when('/about', {
-//         templateUrl: 'views/about.html',
-//         controller: 'AboutCtrl'
-//       })
-//       .when('/foo', {
-//         templateUrl: 'views/foo.html',
-//         controller: 'FooCtrl'
-//       })
-//       .otherwise({
-//         redirectTo: '/'
-//       });
-//   });

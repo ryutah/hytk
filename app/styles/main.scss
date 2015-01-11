@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:700,700italic);
 // endbower
 
 .browsehappy {
@@ -13,7 +14,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 /* Space out content a bit */
 body {
   -webkit-text-size-adjust: 100%;
-  
+
   padding-top: 20px;
   padding-bottom: 20px;
   background: url("../images/back.jpg");
@@ -23,13 +24,13 @@ body {
 textarea {
   resize: none;
 }
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
-
 }
 /* Custom page header */
 .header {
@@ -41,16 +42,28 @@ textarea {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Gentium Book Basic', serif;
+    font-style: italic;
+    font-weight: 700;
   }
 
   li {
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 700;
   }
 
   li:nth-child(2) {
-    border-right: 1px solid #333;
-    border-left: 1px solid #333;
+    border-right: 2px solid #333;
+    border-left: 2px solid #333;
+  }
+
+  .nav-pills {
+    li {
+      font-size: 20px;
+      a {
+        color: #333;
+      }
+    }
   }
 
 }
@@ -63,7 +76,6 @@ textarea {
 }
 .container-narrow > hr {
   margin: 30px 0;
-
 }
 
 textarea {
@@ -123,10 +135,6 @@ textarea {
   position:relative;
 }
 
-.child {
-
-}
-
 .anim {
   position:absolute;
   left: 0;
@@ -164,6 +172,16 @@ textarea {
   left: 100%;
 }
 
-.container {
-  // background-image: url("../images/back.jpg");
+
+/////////////////////////////////////////////////////////////////
+// main.htl
+/////////////////////////////////////////////////////////////////
+.title {
+  h1 {
+    font-family: 'Gentium Book Basic', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 80px;
+    text-align: center;
+  }
 }
