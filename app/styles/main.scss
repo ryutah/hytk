@@ -67,6 +67,10 @@ textarea {
   border-color: transparent;
 }
 
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
 .navbar-toggle {
   border: 0px
 }
@@ -78,9 +82,10 @@ textarea {
     font-weight: 700;
     a {
       color: #333;
-    }
-    a:hover {
-      color: #333;
+        &:link, &:hover, &:visited, &:active {
+          color: #333;
+          background-color: transparent;
+        }
     }
   }
 }
@@ -122,10 +127,10 @@ textarea {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    // max-width: 730px;
-    width: auto;
-    margin-left: 15px;
-    margin-right: 15px;
+    max-width: 730px;
+    // width: auto;
+    // margin-left: 15px;
+    // margin-right: 15px;
   }
 
   /* Remove the padding we set earlier */
