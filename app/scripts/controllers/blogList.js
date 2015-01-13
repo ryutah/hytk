@@ -1,27 +1,30 @@
-'use strict'
+'use strict';
 
-angular.module('yoAngularApp')
-  .controller('BlogListCtrl', function($scope) {
-    var TestObj = function(index) {
-      this.title = 'testTitle' + index;
-    };
+var Tag = function(tag, id) {
+  this.id = id;
+  this.tag = tag;
+};
 
-    var list = [];
-    for(var i = 0; i < 30; i++) {
-      list.push(new TestObj(i + 1));
-    }
+function genTag(tags) {
+  var tagTemlete = '<div class="row><a href="#">%%</a></div>"';
+  var newElem = '';
 
-    var newelem = '';
-    for(var l in list) {
-      console.log(list[l].title);
+  for(var t in tags) {
+    var tag = tagTemlete.replace('%%', tags[t].tag);
+    newElem += tag;
+  }
 
-      var elem = '<div class="row">\n';
-      elem += '<div class="col-md-12">\n';
-      elem += '<h1>' + list[l].title + '</h1>\n';
-      elem += '</div>\n';
-      elem += '</div>\n';
+  return newElem;
+}
 
-      console.log(elem);
-      newelem += elem;
-    }
-  });
+function controller($scope) {
+  var tags = [];
+
+  for(var i; i < 15; i++){
+    tags.push(new Tag('tag' + i, i + 1));
+  }
+
+  $scope.tagdiv = genTag(tags);
+}
+
+angular.module('yoAngularApp').controller('BlogListCtrl', controller);
