@@ -1,5 +1,12 @@
 <div class="row">
   <div class="col-md-6 col-sm-6 col-xs-6">
-    <p>This is the about view.</p>
+    <div class="form-group">
+      <form role="form">
+        <label for="exampleForm">AboutForm</label>
+        <input type="text" class="form-control" id="exampleForm" ng-model="about.form" placeHolder="AboutForm">
+
+        <button class="btn btn-default" ng-click="submit(about)">送信</button>
+      </form>
+    </div>
   </div>
 </div>
