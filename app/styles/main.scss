@@ -194,6 +194,35 @@ textarea {
   left: 100%;
 }
 
+/////////////////////////////////////////////////////////////////
+// ng-repeat アニメーションテスト
+/////////////////////////////////////////////////////////////////
+.animate-test.ng-enter,
+.animate-test.ng-leave {
+  -webkit-transition-duration: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  // display: block;
+  // position: absolute;
+
+}
+.animate-test.ng-enter {
+  opacity: 0;
+
+}
+.animate-test.ng-enter-active {
+  opacity: 1;
+}
+.animate-test.ng-leave {
+  left: 0%;
+
+}
+.animate-test.ng-leave-active {
+  opacity: 0;
+}
+
+
 
 /////////////////////////////////////////////////////////////////
 // main.htl
