@@ -3,6 +3,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$mainFontColor: #CCC;
+
 .browsehappy {
   margin: 0.2em 0;
   // background-image: url("../images/back.jpg");
@@ -16,8 +18,10 @@ body {
 
   padding-top: 20px;
   padding-bottom: 20px;
-  background: url("../images/back.jpg");
+  background: url("../images/black_paper.png");
   background-size: 100% auto;
+
+  color: $mainFontColor;
 }
 
 textarea {
@@ -81,9 +85,9 @@ textarea {
     font-family: 'Gentium Book Basic', serif;
     font-weight: 700;
     a {
-      color: #333;
+      color: $mainFontColor;
         &:link, &:hover, &:visited, &:active {
-          color: #333;
+          color: $mainFontColor;
           background-color: transparent;
         }
     }
@@ -92,7 +96,7 @@ textarea {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
+  color: #999;
   border-top: 1px solid #e5e5e5;
 
 }
@@ -220,6 +224,19 @@ textarea {
 }
 .animate-test.ng-leave-active {
   opacity: 0;
+}
+
+.tegaki-border {
+  border-style: solid;
+  border-width: 7px 0px 0px;//7px 8px 8px;
+  -moz-border-image: url(../images/wakutest.png) 10 8 8 repeat;
+  -webkit-border-image: url(../images/wakutest.png) 10 8 8 repeat;
+  -o-border-image: url(../images/wakutest.png) 10 8 8 repeat;
+  border-image: url(../images/wakutest.png) 10 8 8 fill repeat;
+}
+
+.tegaki-border:hover {
+  cursor: pointer;
 }
 
 
