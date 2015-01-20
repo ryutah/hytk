@@ -16,7 +16,8 @@ var app = angular.module('yoAngularApp',
                          'ngRoute',
                          'ngSanitize',
                          'ngTouch',
-                         'hc.marked'
+                         'hc.marked',
+                         'ui.bootstrap'
                   ]);
 
 app.config(function($routeProvider) {
