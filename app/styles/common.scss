@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@font-face {
+  font-family: 'MyFont';
+  src: url(../fonts/GloriaHallelujah.ttf);
+}
 $mainFontColor: #CCC;
 
 .browsehappy {
@@ -51,7 +55,7 @@ textarea {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'MyFont';
     font-style: italic;
     font-weight: 700;
   }
@@ -82,7 +86,7 @@ textarea {
 #nav-menu-1 {
   li {
     font-size: 20px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'MyFont', cursive;
     font-weight: 700;
     a {
       color: $mainFontColor;
@@ -240,7 +244,7 @@ textarea {
 
 .title {
 
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'MyFont';
   font-weight: 700;
   font-size: 60px;
   text-align: center;
