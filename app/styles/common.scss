@@ -2,12 +2,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+// @import "./main.scss"
+@import "./top.scss";
 
 @font-face {
   font-family: 'MyFont';
   src: url(../fonts/GloriaHallelujah.ttf);
 }
-$mainFontColor: #CCC;
+$mainFontColor: #333;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -20,9 +22,9 @@ $mainFontColor: #CCC;
 body {
   -webkit-text-size-adjust: 100%;
 
-  padding-top: 20px;
+  padding-top: 70px;
   padding-bottom: 20px;
-  background: url("../images/black_paper.png");
+  background: url("../images/wg_stained_canvas_backgrounds_11.jpg");
   background-size: 100% auto;
 
   color: $mainFontColor;
@@ -71,12 +73,16 @@ textarea {
   }
 }
 .navbar-default {
-  background-color: transparent;
+  background-image: url("../images/black_paper.png");
+  opacity: 0.8;
+  // background-color: transparent;
   border-color: transparent;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: transparent;
+  // background-color: transparent;
+  background-image: url("../images/black_paper.png");
+  opacity: 0.8;
 }
 
 .navbar-toggle {
@@ -89,9 +95,9 @@ textarea {
     font-family: 'MyFont', cursive;
     font-weight: 700;
     a {
-      color: $mainFontColor;
+      color: #ccc;
         &:link, &:hover, &:visited, &:active {
-          color: $mainFontColor;
+          color: #ccc;
           background-color: transparent;
         }
     }
@@ -227,6 +233,9 @@ textarea {
   opacity: 0;
 }
 
+///////////////////////////////////////////////
+// 画像ボーダーのテスト
+///////////////////////////////////////////////
 .tegaki-border {
   border-style: solid;
   border-width: 7px 0px 0px;//7px 8px 8px;
