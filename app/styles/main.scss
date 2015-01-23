@@ -2,6 +2,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import "./top.scss";
+
+@font-face {
+  font-family: 'MyFont';
+  src: url(../fonts/GloriaHallelujah.ttf);
+}
+$mainFontColor: #333;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -14,10 +21,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   -webkit-text-size-adjust: 100%;
 
-  padding-top: 20px;
+  padding-top: 70px;
   padding-bottom: 20px;
-  background: url("../images/back.jpg");
+  background: url("../images/wg_stained_canvas_backgrounds_11.jpg");
   background-size: 100% auto;
+
+  color: $mainFontColor;
 }
 
 textarea {
@@ -47,7 +56,7 @@ textarea {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'MyFont';
     font-style: italic;
     font-weight: 700;
   }
@@ -63,12 +72,16 @@ textarea {
   }
 }
 .navbar-default {
-  background-color: transparent;
+  background-image: url("../images/black_paper.png");
+  opacity: 0.8;
+  // background-color: transparent;
   border-color: transparent;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: transparent;
+  // background-color: transparent;
+  background-image: url("../images/black_paper.png");
+  opacity: 0.8;
 }
 
 .navbar-toggle {
@@ -78,12 +91,12 @@ textarea {
 #nav-menu-1 {
   li {
     font-size: 20px;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'MyFont', cursive;
     font-weight: 700;
     a {
-      color: #333;
+      color: #ccc;
         &:link, &:hover, &:visited, &:active {
-          color: #333;
+          color: #ccc;
           background-color: transparent;
         }
     }
@@ -92,12 +105,9 @@ textarea {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
+  color: #999;
   border-top: 1px solid #e5e5e5;
 
-}
-.container-narrow > hr {
-  margin: 30px 0;
 }
 
 textarea {
@@ -127,8 +137,8 @@ textarea {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
-    // width: auto;
+    max-width: 1080px;
+    // width: 70%;
     // margin-left: 15px;
     // margin-right: 15px;
   }
@@ -194,16 +204,61 @@ textarea {
   left: 100%;
 }
 
+/////////////////////////////////////////////////////////////////
+// ng-repeat アニメーションテスト
+/////////////////////////////////////////////////////////////////
+.animate-test.ng-enter,
+.animate-test.ng-leave {
+  -webkit-transition-duration: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  // display: block;
+  // position: absolute;
 
-/////////////////////////////////////////////////////////////////
-// main.htl
-/////////////////////////////////////////////////////////////////
+}
+.animate-test.ng-enter {
+  opacity: 0;
+
+}
+.animate-test.ng-enter-active {
+  opacity: 1;
+}
+.animate-test.ng-leave {
+  left: 0%;
+
+}
+.animate-test.ng-leave-active {
+  opacity: 0;
+}
+
+///////////////////////////////////////////////
+// 画像ボーダーのテスト
+///////////////////////////////////////////////
+.tegaki-border {
+  border-style: solid;
+  border-width: 7px 0px 0px;//7px 8px 8px;
+  -moz-border-image: url(../images/wakutest.png) 10 8 8 repeat;
+  -webkit-border-image: url(../images/wakutest.png) 10 8 8 repeat;
+  -o-border-image: url(../images/wakutest.png) 10 8 8 repeat;
+  border-image: url(../images/wakutest.png) 10 8 8 fill repeat;
+}
+
+.tegaki-border:hover {
+  cursor: pointer;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 .title {
-  h1 {
-    font-family: 'Gentium Book Basic', serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 80px;
-    text-align: center;
+
+  font-family: 'MyFont';
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 50px;
+
+  .container-narrow {
+    width: auto;
   }
 }

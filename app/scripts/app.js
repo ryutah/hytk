@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 var app = angular.module('yoAngularApp',
                         ['ngAnimate',
                          'ngCookies',
@@ -15,7 +16,8 @@ var app = angular.module('yoAngularApp',
                          'ngRoute',
                          'ngSanitize',
                          'ngTouch',
-                         'hc.marked'
+                         'hc.marked',
+                         'ui.bootstrap'
                   ]);
 
 app.config(function($routeProvider) {
@@ -24,7 +26,7 @@ app.config(function($routeProvider) {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
     })
-    .when('/about', {
+    .when('/about/:test', {
       templateUrl: 'views/about.html',
       controller: 'AboutCtrl'
     })
@@ -46,3 +48,7 @@ app.config(['markedProvider', function(markedProvider) {
     }
   });
 }]);
+//
+// app.config(['$locationProvider', function($locationProvider){
+//   $locationProvider.html5Mode(true);
+// }]);
