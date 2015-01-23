@@ -1,8 +1,19 @@
 <div class="container top-page">
   <div class="row">
-    <input class="btn btn-default" type="button" value="Work">
+    <input class="btn btn-default" type="button" value="Work" ng-click="work()">
   </div>
   <div class="row content">
-
+    <div class="col-md-12">
+      <div ng-repeat="w in ws">
+        <p>
+          ここに新着ひょうじする
+        </p>
+      </div>
+      <div ng-repeat="t in ts">
+        <p>
+          タブみたいなのやりたい
+        </p>
+      </div>
+    </div>
   </div>
 </div>
