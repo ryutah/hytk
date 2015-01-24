@@ -3,13 +3,16 @@
     <input class="btn btn-default" type="button" value="Work" ng-click="work()">
   </div>
   <div class="row content">
-    <div class="col-md-12">
-      <div ng-repeat="w in ws">
+    <div class="col-md-12 mainparent">
+      <div ng-init="main.work=true">
+
+      </div>
+      <div ng-if="main.work" class="maincontent">
         <p>
           ここに新着ひょうじする
         </p>
       </div>
-      <div ng-repeat="t in ts">
+      <div ng-if="main.blog" class="maincontent">
         <p>
           タブみたいなのやりたい
         </p>

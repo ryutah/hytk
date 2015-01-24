@@ -18,3 +18,41 @@
   margin-top: 10px;
   height: 440px;
 }
+
+.mainparent {
+  position:relative;
+}
+
+.maincontent {
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.maincontent.ng-enter,
+.maincontent.ng-leave {
+  -webkit-transition-duration: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  display: block;
+  position: absolute;
+
+}
+.maincontent.ng-enter {
+  // top: -300px;
+  opacity: 0;
+
+}
+.maincontent.ng-enter-active {
+  opacity: 1;
+}
+.maincontent.ng-leave {
+  left: 0%;
+
+}
+.maincontent.ng-leave-active {
+  opacity: 0;
+}
