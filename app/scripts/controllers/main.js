@@ -8,19 +8,18 @@
  * Controller of the yoAngularApp
  */
 
-var MainController = {
-  controller: function($scope) {
-    var work = true;
-    var blog = false;
+function MainCtrl() {
+  this.work = true;
+  this.blog = false;
 
-    $scope.work = function() {
-      work = !work;
-      blog = !blog;
-      $scope.main.work = work;
-      $scope.main.blog = blog;
-    };
-  }
-};
+  this.tes = 'test';
 
-angular.module('yoAngularApp')
-  .controller('MainCtrl', MainController.controller);
+  console.log('IN THE MAIN');
+
+  this.change = function() {
+    this.work = !this.work;
+    this.blog = !this.blog;
+  };
+}
+
+angular.module('yoAngularApp').controller('MainCtrl', MainCtrl);

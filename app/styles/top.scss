@@ -1,10 +1,29 @@
+$contentColor: #bbb;
+
 .top-page {
   background-image: url("../images/black_paper.png");
   opacity: 0.8;
   width: 90%;
   height: 500px;
-
+  margin-bottom: 15px;
   color: #ccc;
+}
+
+.mybutton {
+  background-color: transparent;
+  border-color: transparent;
+  font-family: 'MyFont';
+  font-size: 25px;
+  color: $contentColor;
+  &:link, &:hover, &:visited, &:active {
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .content {

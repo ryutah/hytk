@@ -15,17 +15,15 @@ var Tag = function(name, id) {
   this.name = name;
 };
 
-// urlのパラメータ読み込み、ng-repeat、リダイレクトのテスト
-function controller($scope, $location, $routeParams) {
-  $scope.items = [];
+function AboutCtrl($location, $routeParams) {
+  this.items = [];
 
-  var tags = [];
-  tags.push(new Tag('work', 'workid'));
-  tags.push(new Tag('blog', 'blogid'));
-  tags.push(new Tag('java', 'javaid'));
+  this.tags = [];
+  this.tags.push(new Tag('work', 'workid'));
+  this.tags.push(new Tag('blog', 'blogid'));
+  this.tags.push(new Tag('java', 'javaid'));
 
-  $scope.tags = tags;
-  $scope.hre = 'inCont';
+  this.hre = 'inCont';
 
   // urlパラメータ取得
   var loc = $routeParams.test;
@@ -34,7 +32,7 @@ function controller($scope, $location, $routeParams) {
   // console.log($location);
 
   // フォームの送信ボタン押下時
-  $scope.submit = function(about) {
+  this.submit = function(about) {
     // フォームの値をコピーする
     var a = angular.copy(about);
     // フォームのformパラメータ取得
@@ -42,13 +40,13 @@ function controller($scope, $location, $routeParams) {
     // 配列に追加
     array.push(newForm);
     // モデルに値を追加
-    $scope.items = array;
+    this.items = array;
 
-    console.log($scope.items);
+    console.log(this.items);
   };
 
   // タグボタン押下時
-  $scope.lin = function(id){
+  this.lin = function(id){
     console.log(id + ' function lin');
     console.log($location);
 
@@ -60,5 +58,6 @@ function controller($scope, $location, $routeParams) {
   };
 }
 
+
 angular.module('yoAngularApp')
-  .controller('AboutCtrl', controller);
+  .controller('AboutCtrl', AboutCtrl);

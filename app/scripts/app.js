@@ -24,15 +24,18 @@ app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
+      controllerAs: 'main'
     })
     .when('/about/:test', {
       templateUrl: 'views/about.html',
-      controller: 'AboutCtrl'
+      controller: 'AboutCtrl',
+      controllerAs: 'about'
     })
     .when('/foo', {
       templateUrl: 'views/foo.html',
-      controller: 'FooCtrl'
+      controller: 'FooCtrl',
+      controllerAs: 'foo'
     })
     .otherwise({
       redirectTo: '/'
