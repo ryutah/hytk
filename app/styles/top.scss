@@ -4,7 +4,7 @@ $contentColor: #bbb;
   background-image: url("../images/black_paper.png");
   opacity: 0.8;
   width: 90%;
-  height: 500px;
+  min-height: 500px;
   margin-bottom: 15px;
   color: #ccc;
 }
@@ -35,7 +35,7 @@ $contentColor: #bbb;
   border-image: url(../images/wakutest.png) 10 8 8 fill repeat;
 
   margin-top: 10px;
-  height: 440px;
+  min-height: 440px;
 }
 
 .mainparent {
