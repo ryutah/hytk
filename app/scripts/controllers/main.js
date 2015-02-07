@@ -48,9 +48,18 @@ function MainCtrl($http) {
 
   console.log('IN THE MAIN');
 
-  this.change = function() {
-    this.work = !this.work;
-    this.blog = !this.blog;
+  this.showWork = function() {
+    if(!this.work) {
+      this.work = !this.work;
+      this.blog = !this.blog;
+    }
+  };
+
+  this.showBlog = function() {
+    if(!this.blog) {
+      this.work = !this.work;
+      this.blog = !this.blog;      
+    }
   };
 }
 
