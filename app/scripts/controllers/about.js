@@ -15,7 +15,9 @@ var Tag = function(name, id) {
   this.name = name;
 };
 
-function AboutCtrl($location, $routeParams) {
+function AboutCtrl($location, $routeParams, myService) {
+  myService.hello();
+
   this.items = [];
 
   this.tags = [];

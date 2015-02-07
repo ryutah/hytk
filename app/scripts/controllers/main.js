@@ -27,6 +27,9 @@ function MainCtrl($http) {
     console.log('status:' + status);
     console.log('header:', headers);
     console.log('config:' + JSON.stringify(config));
+    console.log('++++++++++++++++++++++++++++++++++++++++');
+    console.log(data.coord);
+    console.log('++++++++++++++++++++++++++++++++++++++++');
   })
   .error(function(data, status, headers, config) {
     console.log('daata:' + JSON.stringify(data));
@@ -58,7 +61,7 @@ function MainCtrl($http) {
   this.showBlog = function() {
     if(!this.blog) {
       this.work = !this.work;
-      this.blog = !this.blog;      
+      this.blog = !this.blog;
     }
   };
 }

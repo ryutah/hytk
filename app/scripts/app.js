@@ -9,16 +9,19 @@
  * Main module of the application.
  */
 
-var app = angular.module('yoAngularApp',
-                        ['ngAnimate',
-                         'ngCookies',
-                         'ngResource',
-                         'ngRoute',
-                         'ngSanitize',
-                         'ngTouch',
-                         'hc.marked',
-                         'ui.bootstrap'
-                  ]);
+var app = angular.module('yoAngularApp', ['ngAnimate',
+  'ngCookies',
+  'ngResource',
+  'ngRoute',
+  'ngSanitize',
+  'ngTouch',
+  'hc.marked',
+  'ui.bootstrap'
+]);
+
+app.service('myService', MyService);
+
+app.service('blogService', ['$http', BlogService]);
 
 app.config(function($routeProvider) {
   $routeProvider
@@ -42,15 +45,23 @@ app.config(function($routeProvider) {
     });
 });
 
-app.config(['markedProvider', function(markedProvider) {
-  markedProvider.setOptions({
-    gfm: true,
-    tables: true,
-    highlight: function (code) {
-      return hljs.highlightAuto(code).value;
-    }
-  });
-}]);
+app.config(['markedProvider', '$httpProvider',
+  function(markedProvider, $httpProvider) {
+    markedProvider.setOptions({
+      gfm: true,
+      tables: true,
+      highlight: function(code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+
+    $httpProvider.defaults.headers.post = {
+      'Content-Type': 'application/json'
+    };
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common["X-Requested-With"];
+  }
+]);
 //
 // app.config(['$locationProvider', function($locationProvider){
 //   $locationProvider.html5Mode(true);

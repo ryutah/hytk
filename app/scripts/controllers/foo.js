@@ -8,20 +8,35 @@
  * Controller of the yoAngularApp
  */
 
-function FooCtrl() {
-  // $scope.awesomeThings = [
-  //   'HTML5 Boilerplate',
-  //   'AngularJS',
-  //   'Karma'
-  // ];
+function FooCtrl(blogService) {
+
+  blogService.hello();
+
+  var data = {
+    testdata: 'testdata',
+    testArray: ['array1', 'array2']
+  };
 
   this.myfoo = '##MyTEST';
 
-  this.test = function() {
-    console.log(this.foo);
-    console.log(this.awesomeThings);
+  var collback = function (data) {
+    console.log(data);
+    console.log(this);
+    this.myfoo = data.data;
+  };
 
+  blogService.getBlogList(collback.bind(this));
+
+  this.test = function() {
     this.myfoo = this.foo;
+
+    var postData = {
+      data: this.foo
+    };
+
+    var resp = blogService.postBlogContent(postData);
+    console.log('response : ' + resp);
+    // this.myfoo = resp;
 
     var TestObj = function(index) {
       this.title = 'testTitle' + index;
@@ -34,7 +49,6 @@ function FooCtrl() {
 
     var newelem = '';
     for(var l in list) {
-      console.log(list[l].title);
 
       var elem = '<div class="row">\n';
       elem += '<div class="col-md-12">\n';
@@ -42,26 +56,10 @@ function FooCtrl() {
       elem += '</div>\n';
       elem += '</div>\n';
 
-      console.log(elem);
       newelem += elem;
     }
 
     this.bindtest = newelem;
-
-    // var str = null;
-    // for(var i = 0; i < 10; i++) {
-    //   if(str === null) {
-    //     str = '<h1>' + 1 + '</h1>';
-    //   }
-    //   else {
-    //     str += '<h1>' + (i+1) + '</h1>';
-    //   }
-    // }
-    //
-    // $scope.bindtest = str;
-    //
-    // var json = JSON.stringify($scope);
-    // console.log(json);
   };
 }
 
