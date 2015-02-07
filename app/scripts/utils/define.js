@@ -1,7 +1,7 @@
 var Define = {
   Top : '',
-  BlogList : 'http://localhost:3000/test',
-  BlogContent : 'http://localhost:3000/test',
+  BlogList : 'https://ajax-test-server.herokuapp.com/test',
+  BlogContent : 'https://ajax-test-server.herokuapp.com/test',
   WorkList : '',
   WorkContent : ''
 };
